@@ -1,5 +1,6 @@
 import 'package:test/test.dart';
 import 'package:source/twosum.dart';
+import 'package:source/reverseInteger.dart';
 
 //pub run test test/test.dart --pause-after-load
 
@@ -34,4 +35,16 @@ void main() {
       expect(TwoSum().usingHashTable(array, 7), [1,3]);
     });
   });
+
+  group("Reverse Integer", () {
+    
+    test('reverse integer odd length', () {
+      expect(ReverseInteger().reverseUsingStr(12345), 54321);
+    });
+    
+    test('reverse integer even length', () {
+      expect(ReverseInteger().reverseUsingStr(1234), 4321);
+    });
+  }
+  );
 }
